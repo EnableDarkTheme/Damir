@@ -1,0 +1,27 @@
+@import "/src/globals/variables.scss";
+@import "/src/globals/mixin.scss";
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: gray; //delete
+  .navigation {
+    @include center-container;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0px;
+    ul {
+      @include remove-default-spacing;
+      display: flex;
+      gap: 1rem;
+      li {
+        &:hover {
+          background-color: aqua; //delete || adjust
+        }
+      }
+    }
+  }
+}

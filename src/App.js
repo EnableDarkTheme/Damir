@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./components/nav/Nav";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
+import "./globals/styles.scss";
+import { Route, Routes } from "react-router-dom";
+
+//TODO: search project with "//remove" and clean up code
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/contact-us" element={<Contact />}></Route>
+        <Route path="/about-us" element={<About />}></Route>
+      </Routes>
+      <Nav />
+    </>
   );
 }
 
